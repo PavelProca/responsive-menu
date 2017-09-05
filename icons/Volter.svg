@@ -1,0 +1,28 @@
+<svg width="9px" height="20px" viewBox="0 0 9 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M0.891777778,19.9982222 C0.676444444,19.858 4.39577778,12.0424444 4.26755556,11.6997778 C4.13933333,11.3573333 0.196,10.1033333 0.00333333333,9.50044444 C-0.189333333,8.89711111 7.78933333,-0.172444444 7.99888889,0.00244444444 C8.208,0.177333333 4.522,8.04511111 4.62311111,8.30066667 C4.72377778,8.55622222 8.76555556,9.86244444 8.88733333,10.5002222 C9.00911111,11.138 1.10688889,20.1384444 0.891777778,19.9982222 Z" id="path-3"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="main-menu" transform="translate(-26.000000, -596.000000)">
+            <g id="Group-4" transform="translate(0.000000, 8.000000)">
+                <g id="Group-3-Copy-10" transform="translate(0.000000, 568.000000)">
+                    <g id="icon-/-volter-/-24" transform="translate(18.000000, 18.000000)">
+                        <g id="high-voltage" transform="translate(8.000000, 2.000000)">
+                            <g id="Capa_1">
+                                <mask id="mask-3" fill="white">
+                                    <use xlink:href="#path-3"></use>
+                                </mask>
+                                <g id="Shape" fill-rule="nonzero"></g>
+                                <g id="color-/-white_60" mask="url(#mask-3)" fill="#FFFFFF" fill-opacity="0.6">
+                                    <g transform="translate(-8.000000, -2.000000)" id="Rectangle-6-Copy-4">
+                                        <rect x="0" y="0" width="24" height="24"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

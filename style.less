@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+@menu-bg: #333D47;
+@white: #fff;
+@elem-bg: rgba(0,0,0,0.4);
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+body {
+	background: #eee;
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.8);
+}
+.main-wrapper {
+	margin: 0 auto;
+	width: 100%;
+	padding-left: 240px;
+	box-sizing: border-box;
+	&:before {
+		content: '';
+		display: none;
+		position: fixed;
+		z-index: 2;
+		background: rgba(0, 0, 0, 0.5);
+		width: 100%;
+		height: 100vh;
+	}
+	&.clicked:before {display: block;}
+}
+.header {
+	position: fixed;
+	width: 100%;
+	height: 60px;
+	z-index: 1;
+	background: @white;
+	box-shadow: 0 0 4px @elem-bg;
+
+	h1 {
+		margin-left: 24px;
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 60px;
+	}
+}
+// SIDE MENU STYLES
+.close {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	svg {cursor: pointer;}
+}
+.side-menu {
+	height: 100vh;
+	width: 240px;
+	z-index: 3;
+	display: flex;
+	color: rgba(255,255,255,0.4);
+	position: fixed;
+	overflow: auto;
+}
+.burger {
+	display: none;
+	position: absolute;
+	top: 17px;
+	fill: rgba(0, 0, 0, 0.8);
+	cursor: pointer;
+}
+.burger.mn2 {
+	position: fixed;
+	top: 17px;
+	right: 10px;
+	z-index: 1;
+}
+
+.first-level {
+	width: 240px;
+	background: @menu-bg;
+}
+.second-level {
+	display: block;
+	width: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background: @menu-bg;
+	z-index: 1;
+	.cont-menu .menu-element:hover {
+		border: none;
+		padding: 12px;
+		line-height: 10px;
+	}
+	.cont-menu .menu-element {
+		height: 36px;
+		padding: 12px;
+		line-height: 10px;
+	}
+}
+.cont-menu {display: none;}
+.side-menu .menu-element {
+	height: 60px;
+	padding: 18px;
+	z-index: 2;
+	box-sizing: border-box;
+	line-height: 25px;
+	color: rgba(255,255,255,0.8);
+	white-space: nowrap;
+	cursor: pointer;
+	&:hover {
+		padding-left: 14px;
+		border-left: 4px solid #92DEFF;
+		background: #1E242A;
+		color: @white;
+		svg {fill: @white;}
+	}
+}
+.second-level input[type="radio"]:checked + label .menu-element {
+	border: none;
+	padding-left: 12px;
+}
+input[type="radio"] {display: none;}
+input[type="radio"]:checked + label .menu-element {
+	padding-left: 14px;
+	border-left: 4px solid #92DEFF;
+	background-color: @elem-bg;
+	color: @white;
+	svg {fill: @white;}
+}
+#elem1:checked + label .menu-element {background: @elem-bg;}
+.first-level input[type="radio"]:checked + label .menu-element {background: @menu-bg;}
+.menu-section {
+	margin-top: 20px;
+	h2 {
+		margin-left: 12px;
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 12px;
+		transition: all 0.2s linear;
+	}
+}
+.section-heading {
+	position: relative;
+	height: 47px;
+	padding: 12px;
+	margin-bottom: 12px;
+	white-space: nowrap;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	box-sizing: border-box;
+	font-size: 16px;
+	line-height: 25px;
+	color: @white;
+	svg {fill: @white;}
+	p {margin-left: 35px;}
+}
+
+.svg-elem {
+	position: absolute;
+	width: 24px;
+	height: 24px;
+}
+.item-name {margin-left: 42px;}
+.logo {
+	height: 60px;
+	padding: 15px 10px;
+	color: @white;
+	line-height: 25px;
+	box-sizing: border-box;
+}
+
+.arrow {
+	width: 24px;
+	height: 24px;
+	position: relative;
+	top: -25px;
+	right: -186px;
+}
+svg {fill: rgba(255, 255, 255, 0.6);}
+
+// CONTENT
+.content-wrapper {
+	display: flex;
+	padding-top: 60px;
+}
+
+#content {
+	width: 100%;
+	height: 1000px;
+	position: relative;
+	margin: 30px 330px 30px 30px;
+	background: @white;
+	img {
+		width: 400px;
+		height: 400px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -200px 0 0 -200px;
+	}
+}
+
+// RIGHT SIDEBAR
+#right-side {
+	width: 300px;
+	height: 100vh;
+	background: red;
+	position: fixed;
+	right: 0;
+	overflow: hidden;
+}
+
+
+// STYLES FOR SMOOTH CLOSING
+.side-menu, #right-side, #content, .main-wrapper {
+	transition: all 0.3s ease;
+}
+
+@media only screen and (max-width: 768px){
+	#right-side {
+		top: 0;
+		right: 0;
+		z-index: 2;
+	}
+}
