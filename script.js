@@ -232,14 +232,18 @@ function hide(act) {
 }
 
 window.onresize = (e) => {
-	if (e.target.innerWidth < 768) {
+	if (window.innerWidth < 768) {
 		document.getElementsByClassName('main-wrapper')[0].className = 'main-wrapper';
 		document.getElementsByClassName('side-menu')[0].style.width = '0';
 		document.getElementsByClassName('main-wrapper')[0].style.padding = '0';
 		document.getElementsByClassName('burger')[0].style.display = 'block';
+		document.getElementsByClassName('main-wrapper')[0].className = 'main-wrapper';
+		document.getElementById('right-side').style.width = '0';
+		document.getElementById('content').style.marginRight = '30px';
+		document.getElementsByClassName('burger')[1].style.display = 'block';
 	}
-	else if(e.target.innerWidth < 1024){
-	  	document.getElementsByClassName('main-wrapper')[0].className = 'main-wrapper';
+	else if (window.innerWidth < 1024) {
+		document.getElementsByClassName('main-wrapper')[0].className = 'main-wrapper';
 		document.getElementsByClassName('side-menu')[0].style.width = '0';
 		document.getElementsByClassName('main-wrapper')[0].style.padding = '0';
 		document.getElementsByClassName('burger')[0].style.display = 'block';
@@ -262,3 +266,17 @@ else if (window.innerWidth < 1024) {
 	document.getElementsByClassName('main-wrapper')[0].style.padding = '0';
 	document.getElementsByClassName('burger')[0].style.display = 'block';
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
