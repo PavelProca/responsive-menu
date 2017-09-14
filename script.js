@@ -75,70 +75,6 @@ function another(im) {
 }
 // ========================================== LAYOUT POSITION ==========================================
 
-/*
-function hide(act) {
-	if (window.innerWidth > 1024) {
-		switch(act) {
-			// OPEN LEFT SIDEBAR
-			case 1.1:
-				document.getElementsByClassName('side-menu')[0].style.width = '0';
-				document.getElementsByClassName('main-wrapper')[0].style.padding = '0';
-				document.getElementsByClassName('burger')[0].style.display = 'block';
-				break;
-			// CLOSE LEFT SIDEBAR
-			case 1.2:
-				document.getElementsByClassName('side-menu')[0].style.width = '240px';
-				document.getElementsByClassName('main-wrapper')[0].style.padding = '0 0 0 240px';
-				document.getElementsByClassName('burger')[0].style.display = 'none';
-				break;
-			// OPEN RIGHT SIDEBAR
-			case 2.1:
-				document.getElementById('right-side').style.width = '0';
-				document.getElementById('content').style.marginRight = '30px';
-				document.getElementsByClassName('burger')[1].style.display = 'block';
-				break;
-			// CLOSE LEFT SIDEBAR
-			case 2.2:
-				document.getElementById('right-side').style.width = '300px';
-				document.getElementById('content').style.marginRight = '330px';
-				document.getElementsByClassName('burger')[1].style.display = 'none';
-				break;
-			default: return;
-		}
-	}
-	else if (window.innerWidth <= 1024) {
-		switch(act) {
-			case 1.1:
-				document.getElementsByClassName('main-wrapper')[0].className = 'main-wrapper';
-				document.getElementsByClassName('side-menu')[0].style.width = '0';
-				document.getElementsByClassName('main-wrapper')[0].style.padding = '0';
-				document.getElementsByClassName('burger')[0].style.display = 'block';
-				break;
-			case 1.2:
-				document.getElementsByClassName('main-wrapper')[0].className = 'main-wrapper clicked';
-				document.getElementsByClassName('side-menu')[0].style.width = '240px';
-				document.getElementsByClassName('main-wrapper')[0].style.padding = '0 0 0 0';
-				document.getElementsByClassName('burger')[0].style.display = 'none';
-				// CLOSE RIGHT SIDEBAR
-				document.getElementById('right-side').style.width = '0';
-				document.getElementById('content').style.marginRight = '30px';
-				document.getElementsByClassName('burger')[1].style.display = 'block';
-				break;
-			case 2.1:
-				document.getElementById('right-side').style.width = '0';
-				document.getElementById('content').style.marginRight = '30px';
-				document.getElementsByClassName('burger')[1].style.display = 'block';
-				break;
-			case 2.2:
-				document.getElementById('right-side').style.width = '300px';
-				document.getElementById('content').style.marginRight = '330px';
-				document.getElementsByClassName('burger')[1].style.display = 'none';
-				break;
-			default: return;
-		}	
-	}
-} 
-*/
 function hide(act) {
 	if (window.innerWidth > 1024) {
 		switch(act) {
@@ -185,12 +121,12 @@ function hide(act) {
 				break;
 			case 2.1:
 				document.getElementById('right-side').style.width = '0';
-				document.getElementById('content').style.marginRight = '30px';
+				document.getElementById('content').style.marginRight = '20px';
 				document.getElementsByClassName('burger')[1].style.display = 'block';
 				break;
 			case 2.2:
 				document.getElementById('right-side').style.width = '300px';
-				document.getElementById('content').style.marginRight = '330px';
+				document.getElementById('content').style.marginRight = '320px';
 				document.getElementsByClassName('burger')[1].style.display = 'none';
 				break;
 			default: return;
@@ -211,13 +147,13 @@ function hide(act) {
 				document.getElementsByClassName('burger')[0].style.display = 'none';
 				// CLOSE RIGHT SIDEBAR
 				document.getElementById('right-side').style.width = '0';
-				document.getElementById('content').style.marginRight = '30px';
+				document.getElementById('content').style.marginRight = '10px';
 				document.getElementsByClassName('burger')[1].style.display = 'block';
 				break;
 			case 2.1:
 				document.getElementsByClassName('main-wrapper')[0].className = 'main-wrapper';
 				document.getElementById('right-side').style.width = '0';
-				document.getElementById('content').style.marginRight = '30px';
+				document.getElementById('content').style.marginRight = '10px';
 				document.getElementsByClassName('burger')[1].style.display = 'block';
 				break;
 			case 2.2:
@@ -239,7 +175,7 @@ window.onresize = (e) => {
 		document.getElementsByClassName('burger')[0].style.display = 'block';
 		document.getElementsByClassName('main-wrapper')[0].className = 'main-wrapper';
 		document.getElementById('right-side').style.width = '0';
-		document.getElementById('content').style.marginRight = '30px';
+		document.getElementById('content').style.marginRight = '10px';
 		document.getElementsByClassName('burger')[1].style.display = 'block';
 	}
 	else if (window.innerWidth < 1024) {
@@ -257,7 +193,7 @@ if (window.innerWidth < 768) {
 	document.getElementsByClassName('burger')[0].style.display = 'block';
 	document.getElementsByClassName('main-wrapper')[0].className = 'main-wrapper';
 	document.getElementById('right-side').style.width = '0';
-	document.getElementById('content').style.marginRight = '30px';
+	document.getElementById('content').style.marginRight = '10px';
 	document.getElementsByClassName('burger')[1].style.display = 'block';
 }
 else if (window.innerWidth < 1024) {
